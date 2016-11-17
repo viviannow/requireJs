@@ -14,6 +14,7 @@ ps:到最后还是要回到官方API
 	<script data-main="scripts/main.js" src="scripts/require.js"></script>  
 
 	##### 定义模块 
+	```
 	define(['jquery','undersocre']function (){
 　　　　var adds = function (x,y){
 　　　　　　return x+y;
@@ -22,12 +23,14 @@ ps:到最后还是要回到官方API
 　　　　　　adds: adds,
 　　　　};
 　　});
+	```
 	##### 引入模块
+	```
 	require(['jquery','math'], function ($,math){//注意$别名
 	var add = math.adds(1,1);
 	$('.btn').on('click',function(){$('p').html(add);})
-
-});
+	});
+	```
 
 
 #### 参数说明

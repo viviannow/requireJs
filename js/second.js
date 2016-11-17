@@ -29,17 +29,11 @@ require.config({
 });
 
  // 这个函数在所有依赖模块被加载完成后才调用执行
-require(['jquery','module/math'], function ($,math){//注意$别名
-	var add = math.adds(1,1);
-	var btn =true;
+require(['jquery','module/squire'], function ($,squire){//注意$别名
+	var a = squire.a;
+
 		$('.btn').on('click',function(){
-			if(btn){
-				add+=1
-			}else{
-				add-=1;
-			}
-            btn =!btn;
-			$('p').html(add);
+			$('p').html(a);
 
 		})
 

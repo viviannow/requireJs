@@ -6,6 +6,7 @@ CommonJS模块的加载机制是，输入的是被输出的值的拷贝。也就
 
 ### demos:
 // lib.js
+```
 var counter = 3;
 function incCounter() {
   counter++;
@@ -14,15 +15,16 @@ module.exports = {
   counter: counter,
   incCounter: incCounter,
 };
-
+```
 // main.js
+```
 var counter = require('./lib').counter;
 var incCounter = require('./lib').incCounter;
 
 console.log(counter);  // 3
 incCounter();
 console.log(counter); // 3
-
+```
 
 
 
